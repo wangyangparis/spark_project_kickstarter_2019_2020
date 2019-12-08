@@ -153,7 +153,7 @@ object Trainer {
       .setTol(1.0e-6)
       .setMaxIter(30)
 
-    // pipeline we sill use
+    // pipeline we actually use
     val pipeline1 = new Pipeline()
       .setStages(Array(tokenizer, remover, tf, idf, indexer_country,indexer_currency,encoder,assembler,lr1))
     val model1 = pipeline1.fit(training)
