@@ -172,7 +172,7 @@ object Trainer {
       .setMetricName("f1")
 
     val accuracy = f1evaluator.evaluate(predicResult)
-    println("Test set accuracy before model tuning " , accuracy, "****************************** " )
+    println("F1 score before model tuning " , accuracy, "****************************** " )
     //0.6146923592544336
     println(+ accuracy)
 
@@ -200,7 +200,7 @@ object Trainer {
 
     //show the f1 accuracy
     val accuracyf1 = f1evaluator.evaluate(dfWithPredictions)
-    println("Accuracy after model tuning = " , accuracyf1, "************************")
+    println("F1 score after model tuning = " , accuracyf1, "************************")
     //=0.6546370572388954
 
     bestModel.write.overwrite().save("lrm_model.model")
